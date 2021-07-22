@@ -1,14 +1,14 @@
-<mvc:View controllerName="ns.consume_app1.controller.View1" 
-xmlns:mvc="sap.ui.core.mvc"
-xmlns:reuselib="ns.reuselib.controls" 
-displayBlock="true"
-xmlns="sap.m">
+<mvc:View controllerName="ns.consume_app1.controller.View1"
+ xmlns:mvc="sap.ui.core.mvc" 
+ xmlns:reuselib="ns.reuselib.controls"
+ displayBlock="true"
+  xmlns="sap.m">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
 					<content>
-                       	<reuselib:Example ></reuselib:Example>
+                          	<reuselib:Example ></reuselib:Example>
                     </content>
 				</Page>
 			</pages>

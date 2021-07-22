@@ -10,7 +10,7 @@
     "bestzip": "2.1.4",
     "rimraf": "3.0.2",
     "@sap/approuter": "10.5.x",
-    "@sap/html5-repo-mock": "2.0.x"
+    "@sap/html5-repo-mock": "^2.0.3"
   },
   "ui5": {
     "dependencies": [

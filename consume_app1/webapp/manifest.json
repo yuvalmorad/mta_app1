@@ -9,110 +9,111 @@
                         "additionalParameters": "allowed"
                     },
                     "semanticObject": "ConsumeApp1",
-                    "action": "Display",
+                    "action": "Display1",
                     "title": "ConsumReuse1",
                     "subTitle": "app"
                 }
-            },
-		"id": "ns.consume_app1",
-            "type": "application",
-            "i18n": "i18n/i18n.properties",
-            "applicationVersion": {
-                "version": "1.0.0"
-            },
-            "title": "ConsumeApp1",
-            "description": "appDescription",
-            "resources": "resources.json",
-            "ach": "ach",
-            "sourceTemplate": {
-                "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
-                "version": "1.40.12"
             }
         },
-        "sap.cloud": {
-            "public": true,
-            "service": "sampleservice1"
+        "id": "ns.consume_app1",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
         },
-        "sap.ui": {
-            "technology": "UI5",
-            "icons": {
-                "icon": "",
-                "favIcon": "",
-                "phone": "",
-                "phone@2": "",
-                "tablet": "",
-                "tablet@2": ""
-            },
-            "deviceTypes": {
-                "desktop": true,
-                "tablet": true,
-                "phone": true
+        "title": "ConsumeApp1",
+        "description": "Description1",
+        "resources": "resources.json",
+        "ach": "ach",
+        "sourceTemplate": {
+            "id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+            "version": "1.40.12"
+        }
+    },
+    "sap.cloud": {
+        "service": "sampleservice",
+        "public": true
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "rootView": {
+            "viewName": "ns.consume_app1.view.View1",
+            "type": "XML",
+            "async": true,
+            "id": "View1"
+        },
+        "dependencies": {
+            "minUI5Version": "1.60.1",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.layout": {},
+                "ns.reuselib": {}
             }
         },
-        "sap.ui5": {
-            "flexEnabled": false,
-            "rootView": {
-                "viewName": "ns.consume_app1.view.View1",
-                "type": "XML",
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ns.consume_app1.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
                 "async": true,
-                "id": "View1"
+                "viewPath": "ns.consume_app1.view",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "clearControlAggregation": false
             },
-            "dependencies": {
-                "minUI5Version": "1.60.1",
-                "libs": {
-                    "sap.ui.core": {},
-                    "sap.m": {},
-                    "sap.ui.layout": {},
-                    "ns.reuselib": {}
+            "routes": [
+                {
+                    "name": "RouteView1",
+                    "pattern": "RouteView1",
+                    "target": [
+                        "TargetView1"
+                    ]
                 }
-            },
-            "contentDensities": {
-                "compact": true,
-                "cozy": true
-            },
-            "models": {
-                "i18n": {
-                    "type": "sap.ui.model.resource.ResourceModel",
-                    "settings": {
-                        "bundleName": "ns.consume_app1.i18n.i18n"
-                    }
-                }
-            },
-            "resources": {
-                "css": [
-                    {
-                        "uri": "css/style.css"
-                    }
-                ]
-            },
-            "routing": {
-                "config": {
-                    "routerClass": "sap.m.routing.Router",
+            ],
+            "targets": {
+                "TargetView1": {
                     "viewType": "XML",
-                    "async": true,
-                    "viewPath": "ns.consume_app1.view",
-                    "controlAggregation": "pages",
-                    "controlId": "app",
-                    "clearControlAggregation": false
-                },
-                "routes": [
-                    {
-                        "name": "RouteView1",
-                        "pattern": "RouteView1",
-                        "target": [
-                            "TargetView1"
-                        ]
-                    }
-                ],
-                "targets": {
-                    "TargetView1": {
-                        "viewType": "XML",
-                        "transition": "slide",
-                        "clearControlAggregation": false,
-                        "viewId": "View1",
-                        "viewName": "View1"
-                    }
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "View1",
+                    "viewName": "View1"
                 }
             }
         }
     }
+}
