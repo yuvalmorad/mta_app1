@@ -1,0 +1,5 @@
+/mta_archives/
+/node_modules/
+/resources/
+consume_app1/consume_app1-content.zip
+consume_app1/.env*
