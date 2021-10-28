@@ -31,7 +31,7 @@
         }
     },
     "sap.cloud": {
-        "service": "sampleservice",
+        "service": "sampleservice1",
         "public": true
     },
     "sap.ui": {
